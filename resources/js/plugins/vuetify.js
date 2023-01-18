@@ -8,6 +8,10 @@ const vuetify = createVuetify({
     icons: {
         defaultSet: 'mdi',
     },
+    locale: {
+        locale: 'fa',
+        fallback: 'fa',
+    }
 })
 
 export default vuetify;

@@ -12,34 +12,36 @@
 
 <div id="app">
     <v-app id="inspire">
-        <v-navigation-drawer permanent>
-            <v-list color="transparent">
-                <v-list-item prepend-icon="mdi-view-dashboard" to="/login" active-color="red">
-                    Login
-                </v-list-item>
-                <v-list-item prepend-icon="mdi-account-box" to="/register" active-color="red">
-                    Register
-                </v-list-item>
-            </v-list>
+        <v-locale-provider rtl>
+            <v-navigation-drawer permanent>
+                <v-list color="transparent">
+                    <v-list-item prepend-icon="mdi-view-dashboard" to="/login" active-color="red">
+                        ورود به سایت
+                    </v-list-item>
+                    <v-list-item prepend-icon="mdi-account-box" to="/register" active-color="red">
+                        ایجاد حساب کاربری
+                    </v-list-item>
+                </v-list>
 
-            <template v-slot:append>
-                <div class="pa-2">
-                    <v-btn block>
-                        Logout
-                    </v-btn>
-                </div>
-            </template>
-        </v-navigation-drawer>
+                <template v-slot:append>
+                    <div class="pa-2">
+                        <v-btn block>
+                            خروج
+                        </v-btn>
+                    </div>
+                </template>
+            </v-navigation-drawer>
 
-        <v-app-bar>
-            <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+            <v-app-bar>
+                <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-            <v-toolbar-title>Application</v-toolbar-title>
-        </v-app-bar>
+                <v-toolbar-title>سیلینو</v-toolbar-title>
+            </v-app-bar>
 
-        <v-main>
-            <router-view></router-view>
-        </v-main>
+            <v-main>
+                <router-view></router-view>
+            </v-main>
+        </v-locale-provider>
     </v-app>
 </div>
 
