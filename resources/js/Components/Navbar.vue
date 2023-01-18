@@ -1,0 +1,34 @@
+<script setup>
+import NavbarItem from "./NavbarItem.vue";
+import {reactive} from "vue";
+
+const items = reactive([
+    {label: "جدیدترین پست‌ها", url: "/", isPrimary: true},
+    {label: "پست‌های دوستان", url: "/", isPrimary: true},
+    {label: "استارتاپ", url: "/", isPrimary: false},
+    {label: "دلنوشته", url: "/", isPrimary: false},
+    {label: "موفقیت", url: "/", isPrimary: false},
+    {label: "کتاب", url: "/", isPrimary: false},
+    {label: "خلاقیت", url: "/", isPrimary: false},
+    {label: "طنز", url: "/", isPrimary: false},
+    {label: "روانشناسی", url: "/", isPrimary: false},
+]);
+</script>
+
+<template>
+    <v-container fluid class="bg-blue-darken-3">
+        <v-container>
+            <ul class="flex text-sm">
+                <NavbarItem
+                    v-for="item in items"
+                    :key="item"
+                    :is-primary="item.isPrimary"
+                    :to="item.url"
+                >
+                    {{ item.label }}
+                </NavbarItem>
+            </ul>
+        </v-container>
+    </v-container>
+</template>
+
