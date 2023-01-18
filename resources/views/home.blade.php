@@ -13,34 +13,23 @@
 <div id="app">
     <v-app id="inspire">
         <v-locale-provider rtl>
-            <v-navigation-drawer permanent>
-                <v-list color="transparent">
-                    <v-list-item prepend-icon="mdi-view-dashboard" to="/login" active-color="red">
-                        ورود به سایت
-                    </v-list-item>
-                    <v-list-item prepend-icon="mdi-account-box" to="/register" active-color="red">
-                        ایجاد حساب کاربری
-                    </v-list-item>
-                </v-list>
-
-                <template v-slot:append>
-                    <div class="pa-2">
-                        <v-btn block>
-                            خروج
+            <v-container>
+                <v-row justify="space-between">
+                    <v-row align="center" class="py-4">
+                        <img src="{{ asset('assets/images/icon.svg') }}" class="h-12" alt="ویرگول"/>
+                        <a href="" class="text-blue-500 hover:text-blue-600 mr-2">ویرگول چیست؟</a>
+                    </v-row>
+                    <v-row align="center" justify="end" class="py-4">
+                        <v-btn icon="mdi-magnify" variant="text" color="grey"></v-btn>
+                        <v-btn :to="{ name: 'login' }" variant="text" class="ml-3 mr-1">
+                            ورود
                         </v-btn>
-                    </div>
-                </template>
-            </v-navigation-drawer>
-
-            <v-app-bar>
-                <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-                <v-toolbar-title>سیلینو</v-toolbar-title>
-            </v-app-bar>
-
-            <v-main>
-                <router-view></router-view>
-            </v-main>
+                        <v-btn :to="{ name: 'register' }" variant="flat" color="blue-darken-3">
+                            ثبت نام
+                        </v-btn>
+                    </v-row>
+                </v-row>
+            </v-container>
         </v-locale-provider>
     </v-app>
 </div>

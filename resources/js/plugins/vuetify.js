@@ -3,6 +3,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
 const vuetify = createVuetify({
+    treeShake: true,
     components,
     directives,
     icons: {
@@ -11,7 +12,7 @@ const vuetify = createVuetify({
     locale: {
         locale: 'fa',
         fallback: 'fa',
-    }
+    },
 })
 
 export default vuetify;
