@@ -18,7 +18,7 @@ const items = reactive([
 <template>
     <v-container fluid class="bg-blue-darken-3">
         <v-container>
-            <ul class="flex text-sm">
+            <ul class="flex text-sm mr-4 sm:mr-0" style="overflow-x: hidden">
                 <NavbarItem
                     v-for="item in items"
                     :key="item"
