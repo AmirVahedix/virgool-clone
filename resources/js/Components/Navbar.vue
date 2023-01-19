@@ -16,19 +16,21 @@ const items = reactive([
 </script>
 
 <template>
-    <v-container fluid class="bg-blue-darken-3">
-        <v-container>
-            <ul class="flex text-sm mr-4 sm:mr-0" style="overflow-x: hidden">
-                <NavbarItem
-                    v-for="item in items"
-                    :key="item"
-                    :is-primary="item.isPrimary"
-                    :to="item.url"
-                >
-                    {{ item.label }}
-                </NavbarItem>
-            </ul>
+    <div class="sticky top-0" style="z-index: 99999">
+        <v-container fluid class="bg-blue-darken-3">
+            <v-container>
+                <ul class="flex text-sm mr-4 sm:mr-0" style="overflow-x: hidden">
+                    <NavbarItem
+                        v-for="item in items"
+                        :key="item"
+                        :is-primary="item.isPrimary"
+                        :to="item.url"
+                    >
+                        {{ item.label }}
+                    </NavbarItem>
+                </ul>
+            </v-container>
         </v-container>
-    </v-container>
+    </div>
 </template>
 

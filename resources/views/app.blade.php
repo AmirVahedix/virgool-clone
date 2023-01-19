@@ -13,7 +13,8 @@
 <body>
 
 <div id="app">
-    <v-app id="app">
+
+    <v-app>
         <v-locale-provider rtl>
             <router-view></router-view>
         </v-locale-provider>

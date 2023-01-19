@@ -51,8 +51,7 @@
                     />
                 </v-col>
             </v-row>
-            <div class="h-12"></div>
-
+            <div class="h-96"></div>
         </v-container>
     </div>
 </template>
