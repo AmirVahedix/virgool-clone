@@ -50,6 +50,10 @@ body .v-application {
     font-family: 'Vazir', serif !important;
 }
 
+input {
+    font-family: 'Vazir', serif !important;
+}
+
 .v-row {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
