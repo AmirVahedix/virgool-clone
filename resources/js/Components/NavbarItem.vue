@@ -1,8 +1,8 @@
 <template>
     <router-link :to="to">
         <li
-            class="py-4 pl-6 text-gray-200 hover:text-gray-50 "
-            :class="{ 'text-gray-50' : isPrimary }"
+            class="py-4 pl-6 hover:text-gray-50 transition-all"
+            :class="{ 'text-gray-50' : isPrimary, 'text-gray-300': !isPrimary }"
             style="white-space: nowrap"
         >
             <slot></slot>

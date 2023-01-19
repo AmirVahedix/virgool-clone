@@ -1,7 +1,7 @@
 import './bootstrap';
 import {createApp} from 'vue';
 
-import router from "./plugins/router";
+import router from "./router/router";
 import vuetify from "./plugins/vuetify";
 
 const BaseComponent = {
