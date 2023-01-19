@@ -11,7 +11,7 @@
 <body>
 
 <div id="app">
-    <v-app id="inspire">
+    <v-app id="app">
         <v-locale-provider rtl>
             <router-view></router-view>
         </v-locale-provider>
