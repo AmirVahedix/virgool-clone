@@ -5,9 +5,11 @@ import ArticleListItem from "./ArticleListItem.vue";
 
 <template>
     <v-col cols="8">
-        <ArticleListItem />
-        <ArticleListItem />
-        <ArticleListItem />
-        <ArticleListItem />
+        <div class="px-2">
+            <ArticleListItem/>
+            <ArticleListItem/>
+            <ArticleListItem/>
+            <ArticleListItem/>
+        </div>
     </v-col>
 </template>
