@@ -1,5 +1,5 @@
 <script setup>
-import BannerItem from "./BannerItem.vue";
+import BannerItem from "../../BannerItem.vue";
 </script>
 
 <template>
