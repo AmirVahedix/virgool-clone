@@ -19,7 +19,7 @@ const items = reactive([
     <div class="sticky top-0" style="z-index: 99999">
         <v-container fluid class="bg-blue-darken-3">
             <v-container>
-                <ul class="flex text-sm mr-4 sm:mr-0" style="overflow-x: hidden">
+                <ul class="flex text-sm mr-4 sm:mr-0 overflow-x-auto hide-scrollbar">
                     <NavbarItem
                         v-for="item in items"
                         :key="item"

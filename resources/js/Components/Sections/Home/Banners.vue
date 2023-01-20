@@ -7,8 +7,7 @@ import BannerItem from "./BannerItem.vue";
         <div class="h-12"></div>
         <h4 class="text-sm text-gray-600 mr-2 sm:mr-0">مطالب انتخابی برای شما</h4>
         <div
-            class="w-full flex overflow-auto lg:grid lg:grid-cols-3 lg:gap-4 mt-4 pr-4 lg:pr-0"
-            id="banners"
+            class="w-full flex overflow-auto lg:grid lg:grid-cols-3 lg:gap-4 mt-4 pr-4 lg:pr-0 hide-scrollbar"
         >
             <BannerItem
                 title="در رد نظریه کارمندی یا سلام فریلنسریِ ارزی!"
