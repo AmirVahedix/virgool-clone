@@ -7,8 +7,10 @@ import SidebarFooter from "./SidebarFooter.vue";
 
 <template>
     <v-col cols="4">
-        <div class="px-2 sticky top-12">
+        <div class="px-2">
             <SidebarHead/>
+        </div>
+        <div class=" sticky top-16">
             <SidebarTrending/>
             <SidebarFooter/>
         </div>
