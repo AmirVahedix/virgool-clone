@@ -13,8 +13,10 @@
                 </v-row>
                 <span class="text-xs font-semibold text-gray-600">برنامه نویسی</span>
             </v-row>
-            <h2 class="text-2xl font-semibold mt-8">مروری بر اتاقی از آن خود نوشته ویرجینیا وولف</h2>
-            <img src="/assets/images/articles/1.webp" class="h-56 w-full object-cover mt-4" alt="">
+            <router-link :to="{ name: 'posts.show', params: { slug: 'article-test' } }">
+                <h2 class="text-2xl font-semibold mt-8">مروری بر اتاقی از آن خود نوشته ویرجینیا وولف</h2>
+                <img src="/assets/images/articles/1.webp" class="h-56 w-full object-cover mt-4" alt="">
+            </router-link>
             <p class="text-sm my-4 text-gray-500">دانیال فرهادی | دانی سون | دنی سون | دانیال | تتو |مدلینگ | عکس
                 دانیال...</p>
             <v-row align="center" no-gutters>
