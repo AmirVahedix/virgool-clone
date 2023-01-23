@@ -1,15 +1,15 @@
 <template>
-    <div class="grid grid-cols-12 w-full h-screen overflow-y-hidden">
-        <div class="col-span-8 bg-gradient-to-br from-[#054592] to-[#1897D4] flex flex-col p-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 w-full h-screen overflow-y-hidden">
+        <div class="col-span-1 lg:col-span-2 bg-gradient-to-br from-[#054592] to-[#1897D4] flex flex-col p-8">
             <div class="flex flex-col items-center mt-auto mb-auto">
                 <router-link to="/" class="bg-white p-3 rounded-md shadow-md">
                     <img src="/assets/images/icon.svg" alt="" class="w-20">
                 </router-link>
-                <h2 class="text-white text-3xl font-bold mt-16">اینجا هر کسی می‌تونه بنویسه!</h2>
-                <p class="font-semibold text-gray-800 mt-4">همین حالا حساب کاربری خودت را بساز و دوران جدید وبلاگ نویسی
+                <h2 class="text-white text-xl lg:text-3xl font-bold mt-4 lg:mt-16">اینجا هر کسی می‌تونه بنویسه!</h2>
+                <p class="font-semibold text-gray-800 mt-4 hidden lg:block">همین حالا حساب کاربری خودت را بساز و دوران جدید وبلاگ نویسی
                     را شروع کن.</p>
             </div>
-            <div class="flex justify-between text-sm text-[#94DEFF]">
+            <div class="hidden xl:flex justify-between text-sm text-[#94DEFF]">
                 <span>&copy; تمام حقوق برای ویرگول محفوظ است.</span>
                 <ul class="flex list-inline gap-4">
                     <li>
@@ -31,12 +31,12 @@
                 </ul>
             </div>
         </div>
-        <div class="col-span-4 flex flex-col p-8">
+        <div class="col-span-1 flex flex-col p-8">
             <div class="mt-auto">
                 <h4 class="text-lg font-bold text-blue-600">ایجاد حساب کاربری</h4>
                 <p class="text-gray-600 mt-2">شماره موبایل یا پست الکترونیک خود را وارد کنید</p>
                 <div class="p-1 mt-4">
-                    <v-text-field label="شماره موبایل یا پست الکترونیک" variant="outlined"></v-text-field>
+                    <v-text-field label="شماره موبایل یا پست الکترونیک" variant="outlined" ></v-text-field>
                 </div>
                 <div class="flex justify-end">
                     <v-btn
@@ -74,13 +74,3 @@
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    name: "Register"
-}
-</script>
-
-<style scoped>
-
-</style>
