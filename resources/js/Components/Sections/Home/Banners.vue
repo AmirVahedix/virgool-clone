@@ -12,7 +12,7 @@ import BannerItem from "./BannerItem.vue";
             <BannerItem
                 title="در رد نظریه کارمندی یا سلام فریلنسریِ ارزی!"
                 image-src="/assets/images/articles/1.webp"
-                url="/"
+                slug="test-post"
                 author-name="امیر واحدی"
                 author-image="/assets/images/avatars/1.webp"
                 author-url="/"
@@ -22,7 +22,7 @@ import BannerItem from "./BannerItem.vue";
             <BannerItem
                 title="خداحافظ ریداکس، سلام کانتکست (قسمت اول)"
                 image-src="/assets/images/articles/2.webp"
-                url="/"
+                slug="post-2"
                 author-name="امیر واحدی"
                 author-image="/assets/images/avatars/2.webp"
                 author-url="/"
@@ -31,7 +31,7 @@ import BannerItem from "./BannerItem.vue";
             <BannerItem
                 title="عقده ی ادیپ چیست؟"
                 image-src="/assets/images/articles/3.webp"
-                url="/register"
+                slug="post-3"
                 author-name="امیر واحدی"
                 author-image="/assets/images/avatars/3.webp"
                 author-url="/"
@@ -40,7 +40,7 @@ import BannerItem from "./BannerItem.vue";
             <BannerItem
                 title="سفر به سرزمینی بکر و فراموش نشدنی (جزیره و دشت هلن)"
                 image-src="/assets/images/articles/4.webp"
-                url="/"
+                slug="post-4"
                 author-name="امیر واحدی"
                 author-image="/assets/images/avatars/4.webp"
                 author-url="/"
