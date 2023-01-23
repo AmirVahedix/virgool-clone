@@ -1,6 +1,7 @@
 <script setup>
 import {useRoute} from 'vue-router';
 import Header from "../Components/Header.vue";
+import SuggestedItem from "../Components/Sections/Post/SuggestedItem.vue";
 
 const route = useRoute();
 </script>
@@ -144,6 +145,20 @@ const route = useRoute();
                 </div>
             </div>
             <div class="h-12"></div>
+        </div>
+        <div class="w-full bg-gray-200 p-24">
+            <v-container>
+                <h6 class="text-sm font-bold text-gray-600">
+                    شاید از این نوشته‌ها هم خوشتان بیاید
+                </h6>
+                <div class="grid grid-cols-3 gap-4 mt-4">
+                    <SuggestedItem key="shit1" />
+                    <SuggestedItem key="shit1" />
+                    <SuggestedItem key="shit1" />
+                </div>
+
+            </v-container>
+            <div class="h-24"></div>
         </div>
     </v-container>
 </template>
