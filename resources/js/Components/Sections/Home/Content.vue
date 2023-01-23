@@ -6,9 +6,9 @@ import Sidebar from "./Sidebar.vue";
 
 <template>
     <v-container class="mt-8">
-        <v-row no-gutters>
+        <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
             <Articles />
             <Sidebar />
-        </v-row>
+        </div>
     </v-container>
 </template>

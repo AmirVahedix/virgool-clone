@@ -6,7 +6,7 @@ import SidebarFooter from "./SidebarFooter.vue";
 </script>
 
 <template>
-    <v-col cols="4">
+    <div class="hidden lg:block">
         <div class="px-2">
             <SidebarHead/>
         </div>
@@ -14,5 +14,5 @@ import SidebarFooter from "./SidebarFooter.vue";
             <SidebarTrending/>
             <SidebarFooter/>
         </div>
-    </v-col>
+    </div>
 </template>
