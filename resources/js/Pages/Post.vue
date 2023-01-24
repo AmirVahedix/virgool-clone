@@ -7,28 +7,33 @@ import PostSidebar from "../Components/Sections/Post/PostSidebar.vue";
 import BottomActions from "../Components/Sections/Post/BottomActions.vue";
 
 const route = useRoute();
+
 const mainContentRef = ref(null);
 const articleBottomAuthorRef = ref(null);
+const tagsRef = ref(null);
 
 const showSidebar = ref(false);
+const showBottomBar = ref(true);
 
 const onScroll = (e) => {
+    checkSidebarVisibility(e);
+    checkBottomBarVisibility(e);
+}
+
+const checkBottomBarVisibility = (e) => {
+    const hasPassed = Math.round(e.target.scrollTop) >= 0;
+    const hasReachedEnd = tagsRef.value.offsetTop <= (Math.round(e.target.scrollTop) + window.innerHeight);
+
+    const result = hasPassed && !hasReachedEnd;
+    if (result !== showBottomBar.value) showBottomBar.value = result;
+}
+
+const checkSidebarVisibility = (e) => {
     const hasPassed = mainContentRef.value.offsetTop <= Math.round(e.target.scrollTop);
     const hasReachedEnd = articleBottomAuthorRef.value.offsetTop <= (Math.round(e.target.scrollTop) + window.innerHeight);
 
     const result = hasPassed && !hasReachedEnd;
-
-    if (result) {
-        if (result !== showSidebar.value) {
-            console.log('show');
-            showSidebar.value = result;
-        }
-    } else {
-        if (result !== showSidebar.value) {
-            console.log('hide');
-            showSidebar.value = result;
-        }
-    }
+    if (result !== showSidebar.value) showSidebar.value = result;
 }
 
 onMounted(() => {
@@ -43,8 +48,8 @@ onBeforeUnmount(() => {
 
 <template>
     <Header/>
-    <PostSidebar :show-sidebar="showSidebar"/>
-    <BottomActions />
+    <PostSidebar :show="showSidebar"/>
+    <BottomActions :show="showBottomBar" />
     <v-container fluid>
         <div class="mx-auto flex flex-col" style="max-width: 740px;">
             <div class="flex items-center mt-12">
@@ -135,7 +140,7 @@ onBeforeUnmount(() => {
                     برای رشدم ایجاد شده بود ببرم.</p>
             </div>
 
-            <div class="mt-24">
+            <div class="mt-24" ref="tagsRef">
                 <ul class="flex gap-4 text-sm">
                     <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded"
                     >لاراول

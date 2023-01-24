@@ -2,8 +2,8 @@
 import {defineProps} from 'vue';
 import SidebarReadMoreItem from "./SidebarReadMoreItem.vue";
 
-const {showSidebar} = defineProps({
-    showSidebar: {
+const {show} = defineProps({
+    show: {
         type: Boolean,
         default: false,
     }
@@ -14,7 +14,7 @@ const {showSidebar} = defineProps({
     <Teleport to="#modals">
         <div
             class="hidden xl:flex flex-col items-start fixed top-16 left-0 transition mx-16"
-            :class="{ 'opacity-0': !showSidebar, 'opacity-100': showSidebar }"
+            :class="{ 'opacity-0': !show, 'opacity-100': show }"
             style="width: 235px"
         >
             <h4 class="font-semibold text-sm">امیر واحدی</h4>
