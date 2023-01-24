@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="bg-white rounded flex flex-col rounded overflow-hidden">
+    <div class="bg-white rounded flex flex-shrink-0 flex-col rounded overflow-hidden w-2/3 lg:w-full">
         <router-link to="/">
             <img src="/assets/images/articles/1.webp" alt="" style="height: 120px" class="w-full object-cover">
         </router-link>

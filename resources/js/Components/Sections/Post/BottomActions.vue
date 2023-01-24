@@ -12,7 +12,7 @@ const {show} = defineProps({
 <template>
     <Teleport to="#modals">
         <div
-            class="fixed bottom-4 left-0 right-0 flex justify-center transition"
+            class="fixed bottom-5 left-0 right-0 flex justify-center transition"
             :class="{ 'opacity-0': !show, 'opacity-100': show }"
         >
             <div class="flex shadow-lg bg-white px-2 py-3 rounded-full text-gray-500">

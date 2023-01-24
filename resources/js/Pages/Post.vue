@@ -49,10 +49,10 @@ onBeforeUnmount(() => {
 <template>
     <Header/>
     <PostSidebar :show="showSidebar"/>
-    <BottomActions :show="showBottomBar" />
+    <BottomActions :show="showBottomBar"/>
     <v-container fluid>
-        <div class="mx-auto flex flex-col" style="max-width: 740px;">
-            <div class="flex items-center mt-12">
+        <div class="mx-auto flex flex-col px-4" style="max-width: 740px;">
+            <div class="flex items-center mt-8">
                 <v-avatar image="/assets/images/avatars/2.webp" size="80"></v-avatar>
                 <div class="flex flex-col mr-3">
                     <div class="flex items-center">
@@ -67,9 +67,10 @@ onBeforeUnmount(() => {
                         >دنبال کنید
                         </v-btn>
                     </div>
-                    <p class="mt-3 text-xs text-gray-600">یاد میگیرم، تجربه می‌کنم، اشتباه می‌کنم و این چرخه من است تا
-                        این که موفق شوم.</p>
-                    <p class="text-xs text-gray-900 mt-2">۳ سال پیش / خواندن ۱۲ دقیقه</p>
+                    <p class="mt-3 text-xs text-gray-600 hidden md:block">
+                        یاد میگیرم، تجربه می‌کنم، اشتباه می‌کنم و این چرخه من است تا این که موفق شوم.
+                    </p>
+                    <p class="text-xs text-gray-900 mt-4">۳ سال پیش / خواندن ۱۲ دقیقه</p>
                 </div>
             </div>
             <h1 class="text-3xl mt-10 font-semibold text-gray-700 leading-10">وقتی که برای مصاحبه توسعه دهنده Front-End
@@ -141,30 +142,37 @@ onBeforeUnmount(() => {
             </div>
 
             <div class="mt-24" ref="tagsRef">
-                <ul class="flex gap-4 text-sm">
-                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded"
-                    >لاراول
+                <ul class="flex flex-wrap gap-4 text-sm">
+                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded">
+                        لاراول
                     </router-link>
-                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded"
-                    >جنگو
+                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded">
+                        جنگو
                     </router-link>
-                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded"
-                    >PHP
+                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded">
+                        PHP
                     </router-link>
-                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded"
-                    >توسعه بک‌اند
+                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded">
+                        توسعه بک‌اند
+                    </router-link>
+                    <router-link to="/" class="bg-gray-100 hover:bg-gray-200 transition py-2 px-4 rounded">
+                        توسعه سرور
                     </router-link>
                 </ul>
             </div>
-            <div class="mt-12 flex justify-between text-gray-500">
-                <div class="flex items-center">
-                    <v-icon icon="mdi-heart-outline" size="28"></v-icon>
-                    <span class="text-xs mr-3">134</span>
-                    <v-icon icon="mdi-comment-outline mr-6" size="28"></v-icon>
-                    <span class="text-xs mr-3">20 نظر</span>
+            <div class="mt-12 flex flex-col md:flex-row justify-between text-gray-500">
+                <div class="flex items-center justify-between md:justify-start">
+                    <div>
+                        <v-icon icon="mdi-heart-outline" size="28"></v-icon>
+                        <span class="text-xs mr-3">134</span>
+                    </div>
+                    <div>
+                        <v-icon icon="mdi-comment-outline mr-6" size="28"></v-icon>
+                        <span class="text-xs mr-3">20 نظر</span>
+                    </div>
                     <v-icon icon="mdi-bookmark-outline mr-6" size="28"></v-icon>
                 </div>
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4 md:pt-0 pt-8">
                     <v-icon icon="mdi-twitter"></v-icon>
                     <v-icon icon="mdi-facebook"></v-icon>
                     <v-btn size="small" variant="outlined" append-icon="mdi-content-copy" rounded="pill">
@@ -189,12 +197,12 @@ onBeforeUnmount(() => {
             </div>
             <div class="h-12"></div>
         </div>
-        <div class="w-full bg-gray-200 p-24">
+        <div class="w-full bg-gray-200 p-4 lg:p-24">
             <v-container>
-                <h6 class="text-sm font-bold text-gray-600">
+                <h6 class="text-sm font-bold text-gray-600 mt-8 lg:mt-0">
                     شاید از این نوشته‌ها هم خوشتان بیاید
                 </h6>
-                <div class="grid grid-cols-3 gap-4 mt-4">
+                <div class="flex overflow-x-auto lg:grid grid-cols-3 gap-4 mt-4 hide-scrollbar">
                     <SuggestedItem key="shit1"/>
                     <SuggestedItem key="shit1"/>
                     <SuggestedItem key="shit1"/>
