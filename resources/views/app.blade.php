@@ -17,6 +17,7 @@
     <v-app>
         <v-locale-provider rtl>
             <router-view></router-view>
+            <div id="modals"></div>
         </v-locale-provider>
     </v-app>
 </div>
